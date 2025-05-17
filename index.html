@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sarah - Enhanced Background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css\happy_birthday.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-decoration" id="bgElements"></div>
+    <canvas class="canvas" id="confetti-canvas"></canvas>
+    
+    <div class="container">
+        <h1 class="large">
+            <span>H</span>
+            <span>A</span>
+            <span>P</span>
+            <span>P</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>B</span>
+            <span>I</span>
+            <span>R</span>
+            <span>T</span>
+            <span>H</span>
+            <span>D</span>
+            <span>A</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>A</span>
+            <span>R</span>
+            <span>A</span>
+            <span>H</span>
+        </h1>
+        
+        <div class="portrait-container" style="background-color: white; border-radius: 50%;">
+            <div class="flower-frame"></div>
+            <div class="portrait">
+                <img src="Images\sarahcropped.png" alt="Sarah's Photo" />
+            </div>
+            
+            <!-- Flower decorations -->
+            <div class="flower flower1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#ff9eea" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#a072ff" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#ff9eea" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#a072ff" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#ff66b3" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#ff66b3" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower7">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#a072ff" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+            <div class="flower flower8">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+                    <path d="M50,30 C60,10 90,20 70,40 C90,60 60,90 50,70 C40,90 10,60 30,40 C10,20 40,10 50,30 Z" fill="#ff9eea" />
+                    <circle cx="50" cy="50" r="10" fill="#ffea00" />
+                </svg>
+            </div>
+        </div>
+    </div>
+            
+    <h3>How did our story begin, I still remember it like it was yesterday</h3>
+<div class="story-container">
+
+   <div class="side-images left">
+            <div class="memory-img-wrapper" data-caption="God when">
+                <img src="Images\nurseuniform3_cropped.png" alt="Memory 1" class="memory-img">
+            </div>
+            <div class="memory-img-wrapper" data-caption="First day at work 👩‍⚕️">
+                <img src="Images\nurseuniform_cropped.png" alt="Memory 2" class="memory-img">
+            </div>
+              <div class="memory-img-wrapper" data-caption="First day at work 👩‍⚕️">
+                <img src="Images\nurseOutfit_4cropped.png" alt="Memory 2" class="memory-img">
+            </div>
+    </div>
+
+    <div class="story-text">
+        <p>on a <span class="highlight">blissful</span> evening in St.john paul lodge no <span class="highlight">network</span> no light as normals<span class="emoji">😂</span>, wanted to fight for <span class="highlight">network</span> under the tank no matter how small it was, then i saw an <span class="highlight">angel</span> under nsukka's <span class="highlight">moon</span> she was <span class="highlight">fair</span> with skin like <span class="highlight">silk</span> and had the warmest of <span class="highlight">aura</span> and how dare i forget to mention she was the most <span class="highlight">beautiful</span> of all the <span class="highlight">damsel</span>s i've encountered</p>
+        <p>and me feeling like the lord of rizz, proceeded to introduce myself to the <span class="highlight">damsel</span> unfortunately my tongue failed me, and i uttered the words "Hi i'm half bread<span class="emoji">🍞</span>" to me it was a massive let down that day,  but now and everyday i thank God those were the words that came out of my mouth cuz thats what brought two us together</p>
+        <p>and now here we are, 4 years later, and i still can't believe how lucky i am to have you in my life, you are the <span class="highlight">love</span> of my life, my <span class="highlight">best friend</span>, and my <span class="highlight">source of happiness</span> and trust me i still remember my promise to marry you <span class="emoji">💍😁</span>I never go back on my word and to be honest if its not you i don't thinks it can be anyone else so finish school  more importantly don't die and i'll meet you on that white Alter<span class="emoji">💒</span> then you can decide when we'll start making babies😂</p>
+    </div>
+
+        <div class="side-images right">
+            <div class="memory-img-wrapper" data-caption="Beautiful as always ✨">
+                <img src="Images\cropped_sarah_casual.png" alt="Memory 3" class="memory-img">
+            </div>
+            <div class="memory-img-wrapper" data-caption="After a long shift 😴">
+                <img src="Images\tired_cropped.png" alt="Memory 4" class="memory-img">
+            </div>
+
+              <div class="memory-img-wrapper" data-caption="After a long shift 😴">
+                <img src="Images\casual_cropped.png" alt="Memory 4" class="memory-img">
+            </div>
+        </div>
+
+</div>
+<!-- 20th Birthday Footer Section -->
+<div class="birthday-footer">
+    <div class="number-container">
+        <h2>big</h2>
+        <div class="number two">2</div>
+        <div class="number zero">0</div>
+    </div>
+    
+    <div class="birthday-message">
+        <h2 class="milestone-header">Celebrating Your 20th!</h2>
+        <p class="milestone-text">Stepping into a new decade with grace, beauty and endless growth. Happy 20th Birthday, Sarah!</p>
+        
+        <div class="milestone-decoration">
+            <div class="milestone-star"></div>
+            <div class="milestone-line"></div>
+            <div class="milestone-star"></div>
+        </div>
+    </div>
+    
+    <div class="gift-box">
+        <div class="gift-lid"></div>
+        <div class="gift-base"></div>
+        <div class="gift-ribbon-vertical"></div>
+        <div class="gift-ribbon-horizontal"></div>
+    </div>
+    
+    <div class="countdown" id="birthdayCountdown">
+        <h3>Your special day is:</h3>
+        <div class="countdown-timer" id="countdownTimer">
+            <div class="countdown-box">
+                <span id="countdown-days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-box">
+                <span id="countdown-hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-box">
+                <span id="countdown-minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-box">
+                <span id="countdown-seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cake-wrapper">
+        <div class="cake">
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="candle">
+                <div class="flame"></div>
+                <div class="candle-body"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wishes-container">
+        <div class="wish" style="animation-delay: 0.5s">Health</div>
+        <div class="wish" style="animation-delay: 1s">Love</div>
+        <div class="wish" style="animation-delay: 1.5s">Success</div>
+        <div class="wish" style="animation-delay: 2s">Happiness</div>
+        <div class="wish" style="animation-delay: 2.5s">Dreams</div>
+        <div class="wish" style="animation-delay: 3s">Adventure</div>
+    </div>
+    
+    <div class="signature">
+        <p>I love you to the moon and back but Jesus definitely loves ou more🥳</p>
+    </div>
+</div>
+<div class="spotify-container">
+    <h3 class="playlist-title">Sarah's Birthday Playlist</h3>
+    <!-- Replace the iframe below with your actual Spotify embed code -->
+ <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2fZoz0LoJ3OxlWvSSO3mjf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set a birthday date - you'll want to change this to Sarah's actual birthday
+    const birthday = new Date();
+    birthday.setDate(birthday.getDate() + 7); // Setting to 7 days in the future for demo
+    
+    function updateCountdown() {
+        const now = new Date();
+        const diff = birthday - now;
+        
+        // Check if birthday is in the past
+        if (diff < 0) {
+            document.getElementById('countdownTimer').innerHTML = '<h3>Happy Birthday Today! 🎉</h3>';
+            return;
+        }
+        
+        // Calculate time units
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        // Update the countdown
+        document.getElementById('countdown-days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Initial update
+    updateCountdown();
+    
+    // Update every second
+    setInterval(updateCountdown, 1000);
+    
+    // Add special effects for numbers
+    const numbers = document.querySelectorAll('.number');
+    numbers.forEach(number => {
+        number.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.2) rotate(10deg)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        number.addEventListener('mouseout', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Add sparkle effect to the wishes
+    const wishes = document.querySelectorAll('.wish');
+    wishes.forEach(wish => {
+        wish.addEventListener('click', function() {
+            this.style.transform = 'scale(1.3) rotate(10deg)';
+            this.style.boxShadow = '0 0 20px rgba(255, 234, 0, 0.8)';
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            }, 500);
+        });
+    });
+    
+    // Make the cake interactive
+    const cake = document.querySelector('.cake');
+    cake.addEventListener('click', function() {
+        const flame = document.querySelector('.flame');
+        
+        // Toggle the flame
+        if (flame.style.opacity !== '0') {
+            flame.style.opacity = '0';
+            flame.style.boxShadow = 'none';
+            
+            // Create smoke effect
+            const smoke = document.createElement('div');
+            smoke.style.position = 'absolute';
+            smoke.style.bottom = '100%';
+            smoke.style.left = '50%';
+            smoke.style.transform = 'translateX(-50%)';
+            smoke.style.width = '10px';
+            smoke.style.height = '10px';
+            smoke.style.borderRadius = '50%';
+            smoke.style.background = 'rgba(200, 200, 200, 0.8)';
+            smoke.style.animation = 'rise 2s forwards';
+            
+            document.querySelector('.candle').appendChild(smoke);
+            
+            // Add smoke animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rise {
+                    0% { opacity: 0.8; width: 10px; height: 10px; bottom: 100%; }
+                    100% { opacity: 0; width: 20px; height: 20px; bottom: calc(100% + 40px); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Remove smoke element after animation
+            setTimeout(() => {
+                smoke.remove();
+            }, 2000);
+        } else {
+            flame.style.opacity = '1';
+            flame.style.boxShadow = '0 0 15px #ffea00, 0 0 30px #ffea00';
+        }
+    });
+});
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Text animation
+            anime({
+                targets: 'h1 span',
+                translateY: [
+                    { value: -40, duration: 600, easing: 'easeOutExpo' },
+                    { value: 0, duration: 800, easing: 'easeOutBounce' }
+                ],
+                rotateY: {
+                    value: 360,
+                    duration: 1200,
+                    easing: 'easeInOutSine'
+                },
+                delay: (el, i) => i * 100,
+                loop: true
+            });
+
+            // Confetti animation setup
+            const canvas = document.getElementById('confetti-canvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '1000';
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            function launchConfetti() {
+                // Create defaults for confetti
+                const defaults = {
+                    particleCount: 80,
+                    spread: 100,
+                    startVelocity: 30,
+                    gravity: 0.9,
+                    scalar: 0.8,
+                    drift: 0,
+                    ticks: 300,
+                    colors: ['#ff9eea', '#a072ff', '#ff66b3', '#ffea00']
+                };
+
+                confetti({
+                    ...defaults,
+                    origin: { x: 0.1, y: 0.5 },
+                    angle: 60
+                });
+
+                // Launch from right
+                confetti({
+                    ...defaults,
+                    origin: { x: 0.9, y: 0.5 },
+                    angle: 120
+                });
+
+                // Launch from center
+                confetti({
+                    ...defaults,
+                    origin: { x: 0.5, y: 0.5 },
+                    spread: 120
+                });
+            }
+
+            let confettiInterval;
+            
+            // Initial confetti launch
+            launchConfetti();
+            
+            // Start periodic confetti
+            confettiInterval = setInterval(launchConfetti, 4000);
+
+            // Add scroll handler
+            window.addEventListener('scroll', () => {
+                const storySection = document.querySelector('.story-container');
+                const storySectionTop = storySection.getBoundingClientRect().top;
+                const bgElements = document.querySelector('.background-decoration');
+                
+                if (storySectionTop <= window.innerHeight * 0.5) {
+                    // Fade out background elements
+                    bgElements.style.transition = 'opacity 1s';
+                    bgElements.style.opacity = '0';
+                    
+                    // Clear confetti interval
+                    clearInterval(confettiInterval);
+                    
+                    // Stop canvas-confetti
+                    confetti.reset();
+                } else {
+                    // Restore background elements when scrolling back up
+                    bgElements.style.opacity = '1';
+                    
+                    // Restart confetti interval if it was cleared
+                    if (!confettiInterval) {
+                        confettiInterval = setInterval(launchConfetti, 4000);
+                    }
+                }
+            });
+
+            // Generate background decorations
+            const bgElement = document.getElementById('bgElements');
+            
+            // Create balloons
+            const balloonColors = ['#ff9eea', '#a072ff', '#ff66b3', '#ffea00'];
+            for (let i = 0; i < 15; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.backgroundColor = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+                balloon.style.left = `${Math.random() * 100}%`;
+                balloon.style.animationDuration = `${15 + Math.random() * 10}s`;
+                balloon.style.animationDelay = `${Math.random() * 5}s`;
+                bgElement.appendChild(balloon);
+            }
+            
+            // Add sparkling stars
+            for (let i = 0; i < 40; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = `${2 + Math.random() * 3}px`;
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDuration = `${2 + Math.random() * 3}s`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+                bgElement.appendChild(star);
+            }
+            
+            // Add floating ribbons
+            for (let i = 0; i < 10; i++) {
+                const ribbon = document.createElement('div');
+                ribbon.className = 'ribbon';
+                ribbon.style.width = `${50 + Math.random() * 150}px`;
+                ribbon.style.left = `${Math.random() * 100}%`;
+                ribbon.style.top = `${Math.random() * 100}%`;
+                ribbon.style.animationDuration = `${15 + Math.random() * 10}s`;
+                ribbon.style.animationDelay = `${Math.random() * 5}s`;
+                ribbon.style.transform = `rotate(${Math.random() * 360}deg)`;
+                bgElement.appendChild(ribbon);
+            }
+            
+            // FIXED: Add a subtle pulse animation for paragraphs occasionally
+            // This replaces the problematic revealOnScroll function
+            setInterval(() => {
+                const paragraphs = document.querySelectorAll('p');
+                const randomIndex = Math.floor(Math.random() * paragraphs.length);
+                
+                // Apply pulse animation to random paragraph
+                paragraphs[randomIndex].style.animation = 'pulse 1s ease-in-out';
+                
+                // Remove animation after it completes
+                setTimeout(() => {
+                    paragraphs[randomIndex].style.animation = 'none';
+                }, 1100);
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
