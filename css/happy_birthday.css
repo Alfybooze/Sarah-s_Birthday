@@ -870,3 +870,292 @@ body {
         margin: 40px 20px;
     }
 }
+/* Enhanced Mobile Responsive Styles */
+
+/* General mobile adjustments */
+@media screen and (max-width: 576px) {
+    /* Header title sizing */
+    .large {
+        font-size: 1.6em;
+        padding: 0 10px;
+    }
+    
+    /* More space-efficient letter spacing */
+    .large span {
+        margin: 0 1px;
+    }
+    
+    /* Better section header sizing */
+    h3 {
+        font-size: 1.4em;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    /* Portrait container sizing */
+    .portrait-container {
+        width: 250px;
+        height: 250px;
+        margin: 30px auto;
+    }
+    
+    /* Adjust flower frame to match portrait size */
+    .flower-frame {
+        width: 290px;
+        height: 290px;
+        top: -20px;
+        left: -20px;
+    }
+    
+    /* Adjust portrait size */
+    .portrait {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Story container adjustments */
+    .story-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+    }
+    
+    /* Reposition side images for better flow */
+    .side-images {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Memory image wrapper sizing */
+    .memory-img-wrapper {
+        width: calc(100% - 20px);
+        max-width: 200px;
+        margin: 10px;
+        padding: 10px 10px 40px 10px;
+    }
+    
+    /* Paragraph styling */
+    p {
+        font-size: 1.1em;
+        padding: 15px;
+        margin: 15px auto;
+        line-height: 1.5;
+    }
+    
+    /* Birthday footer adjustments */
+    .birthday-footer {
+        padding: 40px 10px;
+        margin-top: 40px;
+    }
+    
+    /* Number container */
+    .number-container h2 {
+        font-size: 1.2em;
+    }
+    
+    /* Birthday number styling */
+    .number {
+        font-size: 70px;
+    }
+    
+    /* Birthday message */
+    .milestone-header {
+        font-size: 1.6em;
+    }
+    
+    .milestone-text {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    
+    /* Countdown timer */
+    .countdown {
+        padding: 15px;
+        margin: 30px auto;
+    }
+    
+    .countdown h3 {
+        font-size: 1.2em;
+    }
+    
+    .countdown-timer {
+        gap: 10px;
+    }
+    
+    .countdown-box {
+        min-width: 55px;
+    }
+    
+    .countdown-box span:first-child {
+        font-size: 1.6em;
+        padding: 5px;
+    }
+    
+    /* Cake and gift positioning */
+    .cake-wrapper, .gift-box {
+        position: relative;
+        left: auto;
+        right: auto;
+        margin: 20px auto;
+        transform: scale(0.8);
+    }
+    
+    /* Wishes container */
+    .wishes-container {
+        gap: 8px;
+        margin: 20px 0;
+    }
+    
+    .wish {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+    
+    /* Signature */
+    .signature {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+    
+    /* Spotify container */
+    .spotify-container {
+        padding: 15px;
+        margin: 30px 10px;
+    }
+    
+    .playlist-title {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+    /* Even smaller header for tiny screens */
+    .large {
+        font-size: 1.4em;
+    }
+    
+    /* Smaller portrait */
+    .portrait-container, .portrait {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .flower-frame {
+        width: 240px;
+        height: 240px;
+    }
+    
+    /* Smaller numbers */
+    .number {
+        font-size: 60px;
+    }
+    
+    /* Countdown boxes stacked for very small screens */
+    .countdown-timer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .countdown-box {
+        min-width: 80px;
+        margin-bottom: 10px;
+    }
+    
+    /* Stack wishes vertically */
+    .wishes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .wish {
+        width: 80%;
+    }
+}
+
+/* Fix for flower positioning around portrait */
+@media screen and (max-width: 576px) {
+    .flower1 { top: -10px; }
+    .flower2 { top: 20px; right: -10px; }
+    .flower3 { bottom: 20px; right: -10px; }
+    .flower4 { bottom: -10px; }
+    .flower5 { bottom: 20px; left: -10px; }
+    .flower6 { top: 20px; left: -10px; }
+    .flower7 { right: -10px; }
+    .flower8 { left: -10px; }
+}
+
+/* Improve layout of story section for medium screens */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+    }
+    
+    .side-images {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .memory-img-wrapper {
+        width: calc(33.33% - 20px);
+    }
+    
+    /* Center story text */
+    .story-text {
+        max-width: 100%;
+    }
+}
+
+/* Enhance Spotify responsive sizing */
+.spotify-container iframe {
+    max-height: 300px;
+}
+
+@media screen and (max-width: 576px) {
+    .spotify-container iframe {
+        max-height: 250px;
+    }
+}
+
+/* Fix for background elements on small screens */
+@media screen and (max-width: 576px) {
+    .background-decoration {
+        opacity: 0.5; /* Reduce background intensity on mobile */
+    }
+    
+    .balloon {
+        width: 30px;
+        height: 40px;
+    }
+    
+    .ribbon {
+        width: 30px;
+    }
+}
+
+/* Improve text readability on small screens */
+@media screen and (max-width: 576px) {
+    p, .milestone-text {
+        background: rgba(255, 255, 255, 0.92); /* More opaque background */
+    }
+    
+    .highlight {
+        text-decoration: underline; /* Make highlights more obvious */
+        text-underline-offset: 2px;
+    }
+}
+
+/* Fix for confetti on small screens */
+@media screen and (max-width: 576px) {
+    .canvas {
+        opacity: 0.7; /* Reduce confetti intensity */
+    }
+}

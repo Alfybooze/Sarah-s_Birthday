@@ -94,7 +94,7 @@
         </div>
     </div>
             
-    <h3>How did our story begin, I still remember it like it was yesterday</h3>
+    <h3>How did our story begin, I still remember it like it was yesterday, So once upon a time</h3>
 <div class="story-container">
 
    <div class="side-images left">
@@ -139,7 +139,7 @@
     
     <div class="birthday-message">
         <h2 class="milestone-header">Celebrating Your 20th!</h2>
-        <p class="milestone-text">Stepping into a new decade with grace, beauty and endless growth. Happy 20th Birthday, Sarah!</p>
+        <p class="milestone-text">I pray for more of God's grace and beauty, endless growth and wisdom and continuous protection from God upon you life. Happy 20th Birthday, Sarah!</p>
         
         <div class="milestone-decoration">
             <div class="milestone-star"></div>
@@ -199,7 +199,7 @@
     </div>
     
     <div class="signature">
-        <p>I love you to the moon and back but Jesus definitely loves ou more🥳</p>
+        <p>I love you to the moon and back but Jesus definitely loves you more🥳 so Happy birthday once again, please stay safe and see you when you get home</p>
     </div>
 </div>
 <div class="spotify-container">
@@ -209,9 +209,21 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Set a birthday date - you'll want to change this to Sarah's actual birthday
-    const birthday = new Date();
-    birthday.setDate(birthday.getDate() + 6); // Setting to 7 days in the future for demo
+    // Set birthday to May 23rd
+    function getBirthdayDate() {
+        const today = new Date();
+        const currentYear = today.getFullYear();
+        let birthday = new Date(currentYear, 4, 23); // Month is 0-based, so 4 = May
+        
+        // If May 23rd has passed this year, set to next year
+        if (today > birthday) {
+            birthday = new Date(currentYear + 1, 4, 23);
+        }
+        
+        return birthday;
+    }
+    
+    const birthday = getBirthdayDate();
     
     function updateCountdown() {
         const now = new Date();
