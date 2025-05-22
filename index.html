@@ -112,7 +112,7 @@
     <div class="story-text">
         <p>on a <span class="highlight">blissful</span> evening in St.john paul lodge no <span class="highlight">network</span> no light as normals<span class="emoji">😂</span>, wanted to fight for <span class="highlight">network</span> under the tank no matter how small it was, then i saw an <span class="highlight">angel</span> under nsukka's <span class="highlight">moon</span> she was <span class="highlight">fair</span> with skin like <span class="highlight">silk</span> and had the warmest of <span class="highlight">aura</span> and how dare i forget to mention she was the most <span class="highlight">beautiful</span> of all the <span class="highlight">damsel</span>s i've encountered</p>
         <p>and me feeling like the lord of rizz, proceeded to introduce myself to the <span class="highlight">damsel</span> unfortunately my tongue failed me, and i uttered the words "Hi i'm half bread<span class="emoji">🍞</span>" I was like how does someone even fumble that bad <span class="emoji">🥲</span>,  but now and everyday i thank God those were the words that came out of my mouth cuz thats what brought two us together</p>
-        <p>and now here we are, 4 years later, and i still can't believe how lucky i am to have you in my life, you are the <span class="highlight">love</span> of my life, my <span class="highlight">best friend</span>, and my <span class="highlight">source of happiness</span> and trust me i still remember my promise to marry you <span class="emoji">💍😁</span>I never go back on my word and to be honest if its not you i don't thinks it can be anyone else so finish school  more importantly don't die and i'll meet you on that white Alter<span class="emoji">💒</span> then you can decide when we'll start making babies😂</p>
+        <p>and now here we are, 4 years later, and i still can't believe how lucky i am to have you in my life, you are the <span class="highlight">love</span> of my life, my <span class="highlight">best friend</span>, and my <span class="highlight">source of happiness</span> and trust me i still remember my promise to marry you a prescious gem <span class="emoji">💎💍😁</span>I never go back on my word and to be honest, if its not you i don't think it can be anyone else, so the next time we meet i'll definitely ask you out, but till then stay safe have fun(not too much fun o) and may God bless the works of your hands once again happy birthday my Sarah<span class="emoji">🎂</span></p>
     </div>
 
         <div class="side-images right">
@@ -139,7 +139,7 @@
     
     <div class="birthday-message">
         <h2 class="milestone-header">Celebrating Your 20th!</h2>
-        <p class="milestone-text">I pray for more of God's grace and beauty, endless growth and wisdom and continuous protection from God upon you life. Happy 20th Birthday, Sarah!</p>
+        <p class="milestone-text">I pray for more of God's grace upon your life, his strength, beauty, endless growth and wisdom and continuous protection upon you life. I know that some times things can be fustrating but never forget that i'm rooting for you every step of the way, I'll celebrate your wins and accomplishments like they are my own just like how we've always done it, i hope i'll continue to be your comfort in weak and bad times and don't you forget no matter how tired or fustrating things get i'll always be there to cheer you on and support you no matter what, omo its  now as if i'm writing vow😂😂, Happy 20th Birthday, Sarah!</p>
         
         <div class="milestone-decoration">
             <div class="milestone-star"></div>
@@ -148,44 +148,25 @@
         </div>
     </div>
     
-    <div class="gift-box">
-        <div class="gift-lid"></div>
-        <div class="gift-base"></div>
-        <div class="gift-ribbon-vertical"></div>
-        <div class="gift-ribbon-horizontal"></div>
-    </div>
-    
-    <div class="countdown" id="birthdayCountdown">
-        <h3>Your special day is:</h3>
-        <div class="countdown-timer" id="countdownTimer">
-            <div class="countdown-box">
-                <span id="countdown-days">00</span>
-                <span class="countdown-label">Days</span>
-            </div>
-            <div class="countdown-box">
-                <span id="countdown-hours">00</span>
-                <span class="countdown-label">Hours</span>
-            </div>
-            <div class="countdown-box">
-                <span id="countdown-minutes">00</span>
-                <span class="countdown-label">Minutes</span>
-            </div>
-            <div class="countdown-box">
-                <span id="countdown-seconds">00</span>
-                <span class="countdown-label">Seconds</span>
+    <div class="celebration-items">
+        <div class="cake-wrapper" id="cakeSection">
+            <div class="wish-prompt" id="wishPrompt">Sarah won't you make a wish?☺️, when your done tap on the cake to seal the wish</div>
+            <div class="cake">
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-body"></div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="cake-wrapper">
-        <div class="cake">
-            <div class="cake-top"></div>
-            <div class="cake-middle"></div>
-            <div class="cake-bottom"></div>
-            <div class="candle">
-                <div class="flame"></div>
-                <div class="candle-body"></div>
-            </div>
+
+        <div class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-base"></div>
+            <div class="gift-ribbon-vertical"></div>
+            <div class="gift-ribbon-horizontal"></div>
         </div>
     </div>
     
@@ -199,7 +180,7 @@
     </div>
     
     <div class="signature">
-        <p>I love you to the moon and back but Jesus definitely loves you more🥳 so Happy birthday once again, please stay safe and see you when you get home</p>
+        <p>I love you to the moon and back but Jesus definitely loves you more🥳 so Happy birthday once again, please stay safe and hopefully see you when you get home, so i made a play list for you since you listen to anything i was just adding to it if the music sounds nice, so the playlist is yours hear it out and tell me what you think😁<br></p>
     </div>
 </div>
 <div class="spotify-container">
@@ -226,26 +207,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const birthday = getBirthdayDate();
     
     function updateCountdown() {
+        const countdownTimer = document.getElementById('countdownTimer');
+        if (!countdownTimer) return; // Add null check
+        
         const now = new Date();
         const diff = birthday - now;
         
         // Check if birthday is in the past
         if (diff < 0) {
-            document.getElementById('countdownTimer').innerHTML = '<h3>Happy Birthday Today! 🎉</h3>';
+            countdownTimer.innerHTML = '<h3>Happy Birthday Today! 🎉</h3>';
             return;
         }
         
-        // Calculate time units
+        // Calculate time units and update display
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
         
-        // Update the countdown
-        document.getElementById('countdown-days').textContent = days.toString().padStart(2, '0');
-        document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+        // Update the countdown elements with null checks
+        const daysElement = document.getElementById('countdown-days');
+        const hoursElement = document.getElementById('countdown-hours');
+        const minutesElement = document.getElementById('countdown-minutes');
+        const secondsElement = document.getElementById('countdown-seconds');
+        
+        if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
+        if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+        if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+        if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
     }
     
     // Initial update
@@ -282,47 +271,83 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Make the cake interactive
     const cake = document.querySelector('.cake');
+    const wishPrompt = document.getElementById('wishPrompt');
+    let wishMade = false;
+    
     cake.addEventListener('click', function() {
         const flame = document.querySelector('.flame');
         
-        // Toggle the flame
-        if (flame.style.opacity !== '0') {
-            flame.style.opacity = '0';
-            flame.style.boxShadow = 'none';
-            
-            // Create smoke effect
-            const smoke = document.createElement('div');
-            smoke.style.position = 'absolute';
-            smoke.style.bottom = '100%';
-            smoke.style.left = '50%';
-            smoke.style.transform = 'translateX(-50%)';
-            smoke.style.width = '10px';
-            smoke.style.height = '10px';
-            smoke.style.borderRadius = '50%';
-            smoke.style.background = 'rgba(200, 200, 200, 0.8)';
-            smoke.style.animation = 'rise 2s forwards';
-            
-            document.querySelector('.candle').appendChild(smoke);
-            
-            // Add smoke animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes rise {
-                    0% { opacity: 0.8; width: 10px; height: 10px; bottom: 100%; }
-                    100% { opacity: 0; width: 20px; height: 20px; bottom: calc(100% + 40px); }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // Remove smoke element after animation
+        if (!wishMade) {
+            wishPrompt.style.opacity = '1';
+            wishPrompt.style.transform = 'translateX(-60px)';
             setTimeout(() => {
-                smoke.remove();
+                wishPrompt.style.opacity = '0';
+                wishPrompt.style.transform = 'translateX(-20px)';
+                
+                // After prompt fades, show confirmation and extinguish candle
+                setTimeout(() => {
+                    flame.style.opacity = '0';
+                    flame.style.boxShadow = 'none';
+                    createSparkles();
+                    wishMade = true;
+                }, 1000);
             }, 2000);
-        } else {
-            flame.style.opacity = '1';
-            flame.style.boxShadow = '0 0 15px #ffea00, 0 0 30px #ffea00';
         }
     });
+
+    function createSparkles() {
+        for (let i = 0; i < 12; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            const angle = (i / 12) * 360;
+            const radius = 50;
+            sparkle.style.left = `calc(50% + ${Math.cos(angle * Math.PI / 180) * radius}px)`;
+            sparkle.style.top = `calc(50% + ${Math.sin(angle * Math.PI / 180) * radius}px)`;
+            document.querySelector('.cake-wrapper').appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+    }
+
+    // Add intersection observer for cake section
+    const cakeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const wishPrompt = document.getElementById('wishPrompt');
+            if (entry.isIntersecting && !wishMade) {
+                entry.target.classList.add('active');
+                wishPrompt.classList.add('visible');
+            } else {
+                entry.target.classList.remove('active');
+                wishPrompt.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const cakeSection = document.getElementById('cakeSection');
+    if (cakeSection) {
+        cakeObserver.observe(cakeSection);
+    }
+
+    // Single cake click handler
+    if (cake && wishPrompt) {
+        cake.addEventListener('click', function() {
+            if (!wishMade) {
+                const flame = document.querySelector('.flame');
+                if (flame) {
+                    flame.style.opacity = '0';
+                    flame.style.boxShadow = 'none';
+                }
+                
+                wishPrompt.textContent = '🎉 Amen to your wish! Happy Birthday! Sarah 🎉';
+                createSparkles();
+                wishMade = true;
+                
+                // Simple fade out after delay
+                setTimeout(() => {
+                    wishPrompt.style.opacity = '0';
+                }, 2000);
+            }
+        });
+    }
 });
 </script>
 

@@ -650,12 +650,16 @@ body {
 
 /* Cake Animation */
 .cake-wrapper {
-    position: absolute;
-    left: 10%;
-    bottom: 50px;
-    width: 100px;
-    height: 100px;
-    z-index: 20;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 60px auto;
+    transform: scale(0.8);
+    transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.cake-wrapper.active {
+    transform: scale(1.2);
 }
 
 .cake {
@@ -663,6 +667,7 @@ body {
     width: 100px;
     height: 80px;
     animation: cake-bounce 3s ease-in-out infinite;
+    cursor: pointer;
 }
 
 .cake-bottom {
@@ -1157,5 +1162,201 @@ body {
 @media screen and (max-width: 576px) {
     .canvas {
         opacity: 0.7; /* Reduce confetti intensity */
+    }
+}
+
+.wish-prompt {
+    position: absolute;
+    left: -180px;  /* Position to the left on large screens */
+    top: -30%;      /* Center vertically */
+    width: max-content;
+    max-width: 200px;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    color: #ff66b3;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    pointer-events: none;
+    z-index: 100;
+    border: 3px solid #000;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+}
+
+.wish-prompt::after {
+    content: '';
+    position: absolute;
+    right: -15px;  /* Point towards the cake */
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);  /* Rotate to point right */
+    border-width: 20px 15px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
+}
+
+.wish-prompt::before {
+    content: '';
+    position: absolute;
+    right: -19px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    border-width: 22px 17px 0;
+    border-style: solid;
+    border-color: #000 transparent transparent;
+    z-index: -1;
+}
+
+.wish-prompt.visible {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: translateX(-50%) scale(0); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+@media screen and (max-width: 768px) {
+    .wish-prompt {
+        left: 150%;     /* Reset left position */
+        right: -220px;  /* Position to the right on small screens */
+        top: -40%;
+        transform: translateY(-50%);
+        width: 100px;
+        max-height: 180px;
+    }
+
+    .wish-prompt::after {
+        left: -15px;    /* Point towards the cake from right side */
+        right: auto;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .wish-prompt::before {
+        left: -19px;
+        right: auto;
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cake-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 40px auto;
+    }
+
+    .wish-prompt {
+        bottom: -50px;
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cake-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wish-prompt {
+        left: 120%;     /* Reset left position */
+        right: -220px;  /* Position to the right on small screens */
+        top: -40%;
+        transform: translateY(-50%);
+        width: 90px;
+        max-height: 180px;
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffea00;
+    border-radius: 50%;
+    animation: sparkleAnim 1s ease-out forwards;
+}
+
+@keyframes sparkleAnim {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+@media screen and (max-width: 768px) {
+    .cake-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 40px auto;
+    }
+
+    .wish-prompt {
+        bottom: -50px;
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cake-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wish-prompt {
+        bottom: -45px;
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+/* Cake and Gift Container */
+.celebration-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.cake-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: scale(0.9);
+    transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    margin: 0;
+}
+
+.gift-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.cake-wrapper.active,
+.gift-box:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .celebration-items {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .cake-wrapper,
+    .gift-box {
+        margin: 20px auto;
     }
 }
